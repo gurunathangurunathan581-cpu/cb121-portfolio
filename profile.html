@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>guru</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .sidebar button {
+            width: 160px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .sidebar button:hover {
+            background-color: darkgreen;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        h1, h3 {
+            margin: 10px 0;
+        }
+        a {
+            color: green;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="scrollToSection('about')">About Me</button>
+        <button onclick="scrollToSection('education')">Education</button>
+        <button onclick="scrollToSection('skills')">Skills</button>
+        <button onclick="scrollToSection('projects')">Projects</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+        <button onclick="downloadResume()">Download Resume</button>
+    </div>
+    <div class="content">
+        <center>
+            <h1>PERSONAL PORTFOLIO</h1>
+            <img src="IMG-20250310-WA0013.jpg" alt="Profile Image">
+            <h1>GURUNATHAN M</h1>
+            <h3>CSBS student</h3>
+        </center>
+
+        <h1 id="about">ABOUT ME:</h1>
+        <h3>
+            My name is Gurunathan. I am a student of the CSBS (Computer Science and Business Systems) department at BIT. I am interested in learning computer science concepts and understanding how technology and business work together. I am focused on improving my skills, gaining knowledge, and building a strong foundation for my future career.
+        </h3>
+
+        <h1 id="education">EDUCATION:</h1>
+        <h3>
+            <ul>
+                <li>Government Higher Secondary School, Reserveline, Sivakasi: 81.5 (12th)</li>
+                <li>Government High School, Anaiyur, Sivakasi: 86.6 (10th)</li>
+            </ul>
+        </h3>
+
+        <h1 id="skills">SKILLS:</h1>
+        <h3>
+            <ul>
+                <li>C program (Basic)</li>
+                <li>Python (Basic)</li>
+                <li>Java (Basic)</li>
+            </ul>
+        </h3>
+
+        <h1 id="projects">PROJECTS:</h1>
+        <h3>
+            <ul>
+                <li>SIH (participated)</li>
+            </ul>
+        </h3>
+
+        <h1 id="contact">CONTACT:</h1>
+        <h3>
+            <ul>
+                <li>+91 9342822955</li>
+                <li>gmail: gurunathanm.cb24@bitsathy.ac.in</li>
+                <li><a href="https://www.linkedin.com/in/gurunathan-m-952b79354/">LinkedIn</a></li>
+            </ul>
+        </h3>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        function downloadResume() {
+            window.location.href = 'Gurunathan_Resume.pdf';
+        }
+    </script>
+</body>
+</html>
